@@ -4,4 +4,7 @@
 @theme {
   --font-primary: "Open Sans", "sans-serif";
   --font-secondary: "Inter", "sans-serif";
+  --color-custom-purple: #5d14a2;
+  --color-custom-black: #1e1e1e;
+  --color-custom-brown: #aa600a;
 }
