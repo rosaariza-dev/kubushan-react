@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..500&family=Open+Sans:wght@400..700&display=swap");
 
 @theme {
   --font-primary: "Open Sans", "sans-serif";
@@ -7,4 +6,17 @@
   --color-custom-purple: #5d14a2;
   --color-custom-black: #1e1e1e;
   --color-custom-brown: #aa600a;
+  --color-custom-gray: #c2c2c2;
+}
+
+.title {
+  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl;
+}
+
+.subtitle {
+  @apply font-primary font-normal text-3xl text-custom-black leading-10 md:text-5xl md:leading-16;
+}
+
+.description {
+  @apply font-secondary font-normal text-base text-custom-black leading-7 md:text-xl md:leading-8;
 }

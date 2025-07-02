@@ -1,11 +1,11 @@
 
 import './App.css'
-import Header from './components/global/Header'
+import Hero from './components/ui/Hero'
 
 function App() {
 
   return (
-   <Header />
+   <Hero /> 
   )
 }
 
