@@ -3,7 +3,7 @@ import Header from "../global/Header";
 
 const Hero = () => {
   return (
-    <div className="bg-linear-225 from-white to-custom-gray">
+    <div className="bg-linear-225 from-white to-custom-gray-gradient">
       <Header />
       <section>
         <div className="px-8 py-3 md:px-16 lg:flex lg:items-center lg:justify-between lg:flex-row-reverse lg:gap-15">
@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
           <div className="flex-1">
             <span className="title" >Más que café</span>
-            <span className="subtitle mt-3 mb-6 block " >
+            <span className="subtitle mt-3 mb-6 block lg:mt-5 " >
               Espacios con proposito, Tecnología con sentido
             </span>
             <p  className="description">
@@ -40,7 +40,7 @@ const Hero = () => {
               <button className="button-base rounded-tr-36 rounded-b-36 bg-custom-purple text-white text-base shadow-[var(--shadow-principal)] hover:bg-custom-purple-hover">
                 <a href="#menu">Explorar</a>
               </button>
-              <button className="button-base text-base rounded-36  flex items-center justify-center hover:bg-custom-gray">
+              <button className="button-base text-base rounded-36  flex items-center justify-center hover:bg-custom-gray/80">
                 <a href="#about" className="flex items-center justify-center gap-2"><img src={icons.hero.play} alt="play" width={40} height={40} />Nuestra historia</a>
               </button>
             </div>

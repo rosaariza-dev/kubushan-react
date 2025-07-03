@@ -42,7 +42,7 @@ const Header = () => {
         <ul className={menuClasses}>
           <li className="p-3 md:hidden"><button id="close-button" aria-label="cerrar menú" className="text-white bg-custom-black border-none p-1 w-7 h-7 rounded-lg cursor-pointer flex items-center justify-center " onClick={closeMenu}><X /></button></li>
           {navItems.map(({title, link}) => (
-            <li key={title}><a href={link} className="flex p-3 w-full rounded-lg hover:bg-gray-100 md:rounded-full md:px-4 md:py-2" onClick={closeMenu}>{title}</a></li>
+            <li key={title}><a href={link} className="flex p-3 w-full rounded-lg hover:bg-custom-gray/20 md:rounded-full md:px-4 md:py-2" onClick={closeMenu}>{title}</a></li>
           ))}
         </ul>
     

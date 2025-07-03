@@ -8,14 +8,15 @@
   --color-custom-black: #1e1e1e;
   --color-custom-black-hover: #1e1e1eef;
   --color-custom-brown: #aa600a;
-  --color-custom-gray: rgba(194, 194, 194, 0.2);
+  --color-custom-gray: rgba(194, 194, 194, 1);
+  --color-custom-gray-gradient: rgba(194, 194, 194, 1);
   --shadow-principal: 0 6px 6px rgba(127, 17, 224, 0.5);
   --radius-36: 36px;
   --height-60: 60px;
 }
 
 .title {
-  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl;
+  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl lg:text-7xl;
 }
 
 .subtitle {
