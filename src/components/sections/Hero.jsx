@@ -1,4 +1,4 @@
-import { images } from "../../data/resources";
+import { images , icons } from "../../data/resources";
 import Header from "../global/Header";
 
 const Hero = () => {
@@ -36,8 +36,17 @@ const Hero = () => {
               conectar, para que vivas con más presencia, propósito y paz, sorbo
               a sorbo.
             </p>
+            <div className="flex items-start justify-start flex-col md:flex-row gap-10 mt-6 mb-10">
+              <button className="button-base rounded-tr-36 rounded-b-36 bg-custom-purple text-white text-base shadow-[var(--shadow-principal)] hover:bg-custom-purple-hover">
+                <a href="#menu">Explorar</a>
+              </button>
+              <button className="button-base text-base rounded-36  flex items-center justify-center hover:bg-custom-gray">
+                <a href="#about" className="flex items-center justify-center gap-2"><img src={icons.hero.play} alt="play" width={40} height={40} />Nuestra historia</a>
+              </button>
+            </div>
           </div>
         </div>
+
       </section>
     </div>
   );

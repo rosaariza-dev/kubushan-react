@@ -4,9 +4,14 @@
   --font-primary: "Open Sans", "sans-serif";
   --font-secondary: "Inter", "sans-serif";
   --color-custom-purple: #5d14a2;
+  --color-custom-purple-hover: #530e94;
   --color-custom-black: #1e1e1e;
+  --color-custom-black-hover: #1e1e1eef;
   --color-custom-brown: #aa600a;
-  --color-custom-gray: #c2c2c2;
+  --color-custom-gray: rgba(194, 194, 194, 0.2);
+  --shadow-principal: 0 6px 6px rgba(127, 17, 224, 0.5);
+  --radius-36: 36px;
+  --height-60: 60px;
 }
 
 .title {
@@ -19,4 +24,8 @@
 
 .description {
   @apply font-secondary font-normal text-base text-custom-black leading-7 md:text-xl md:leading-8;
+}
+
+.button-base {
+  @apply text-center font-secondary py-4 px-5 font-medium min-w-[212px] h-60 cursor-pointer;
 }

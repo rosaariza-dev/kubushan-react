@@ -1,6 +1,6 @@
 
 import './App.css'
-import Hero from './components/ui/Hero'
+import Hero from './components/sections/Hero'
 
 function App() {
 
