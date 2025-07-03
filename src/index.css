@@ -16,11 +16,11 @@
 }
 
 .title {
-  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl lg:text-7xl;
+  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl lg:text-[68px];
 }
 
 .subtitle {
-  @apply font-primary font-normal text-3xl text-custom-black leading-10 md:text-5xl md:leading-16;
+  @apply font-primary font-normal text-3xl text-custom-black leading-10 md:text-4xl md:leading-16 lg:text-[42px];
 }
 
 .description {

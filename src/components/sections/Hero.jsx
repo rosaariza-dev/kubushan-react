@@ -1,14 +1,15 @@
 import { images , icons } from "../../data/resources";
 import Header from "../global/Header";
+import Testimonial from "../ui/Testimonial";
 
 const Hero = () => {
   return (
     <div className="bg-linear-225 from-white to-custom-gray-gradient">
       <Header />
-      <section>
+      <section className="md:pt-6 md:pb-8">
         <div className="px-8 py-3 md:px-16 lg:flex lg:items-center lg:justify-between lg:flex-row-reverse lg:gap-15">
           <div className="flex flex-1 items-center justify-center aspect-[52/78] relative">
-            <picture className="w-full h-full md:max-w-[800px]">
+            <picture className="w-full h-full">
               <source
                 media="(min-width: 768px)"
                 srcSet={images.hero.coffeeDesktop}
@@ -47,6 +48,7 @@ const Hero = () => {
           </div>
         </div>
 
+        <Testimonial />
       </section>
     </div>
   );
