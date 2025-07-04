@@ -16,7 +16,7 @@
 }
 
 .title {
-  @apply font-primary font-bold text-custom-purple text-5xl md:text-6xl lg:text-[68px];
+  @apply font-primary font-bold text-custom-purple text-5xl leading-14 md:text-6xl md:leading-16 lg:text-[68px] lg:leading-18;
 }
 
 .subtitle {
@@ -29,4 +29,8 @@
 
 .button-base {
   @apply text-center font-secondary py-4 px-5 font-medium min-w-[212px] h-60 cursor-pointer;
+}
+
+.encabezado {
+  @apply text-custom-black uppercase font-secondary block mb-2 text-base;
 }
