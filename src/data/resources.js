@@ -6,6 +6,9 @@ import user from "../assets/images/user.png";
 import womanSmall from "../assets/images/woman_small.avif";
 import womanMedium from "../assets/images/woman_medium.avif";
 import womanDesktop from "../assets/images/woman.avif";
+import service1 from "../assets/images/service_1.webp";
+import service2 from "../assets/images/service_2.webp";
+import service3 from "../assets/images/service_3.webp";
 
 export const images = {
   hero: {
@@ -18,6 +21,11 @@ export const images = {
     womanSmall,
     womanMedium,
     womanDesktop,
+  },
+  services: {
+    service1,
+    service2,
+    service3,
   },
 };
 
