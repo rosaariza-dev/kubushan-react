@@ -1,9 +1,19 @@
+import clsx from "clsx"
 import { servicesItems } from "../../data"
 import CardService from "../ui/CardService"
 
 const Services = () => {
+  const servicesClasses = clsx(
+    // Estilos base/mobile
+    "py-20 px-8 flex flex-col items-center bg-[linear-gradient(to_right,var(--color-custom-gray-gradient),white),url('/assets/images/services_bg_small.webp')] bg-blend-multiply bg-cover bg-no-repeat bg-center",
+    // Estilos tablet
+    "md:bg-[linear-gradient(to_right,var(--color-custom-gray-gradient),white),url('/assets/images/services_bg_medium.webp')]",
+    // Estilos desktop
+    "lg:bg-[linear-gradient(to_right,var(--color-custom-gray-gradient),white),url('/assets/images/services_bg.webp')]"
+  );
+  
   return (
-    <section id='services' className="py-20 px-8 flex flex-col items-center bg-linear-to-r from-custom-gray-gradient to-white ">
+    <section id='services' className={servicesClasses}>
         <span className='encabezado'>servicios</span>
         <span className='title text-center'>Nuestros servicios</span><br />
         <span className="font-secondary block text-xl py-5 text-custom-black">En Kubushan pensamos en todo</span>
