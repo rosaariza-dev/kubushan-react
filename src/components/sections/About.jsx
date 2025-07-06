@@ -14,7 +14,7 @@ const About = () => {
     );
 
   return (
-    <section id='about' className="flex flex-col md:flex-row">
+    <section id='about' className="flex flex-col lg:flex-row">
         <div className={aboutImageClasses}>
             <picture className='aspect-[346/524] flex justify-center items-end absolute bottom-0 w-full h-full'> 
                 <source

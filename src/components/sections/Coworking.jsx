@@ -4,8 +4,8 @@ import CoworkingItem from '../ui/CoworkingItem'
 
 const Coworking = () => {
   return (
-    <section id='coworking' className='bg-linear-to-l from-custom-gray-gradient to-white flex flex-col md:flex-row flex-wrap'>
-        <div className='realtive aspect-[631/946] w-full overflow-hidden flex flex-1/2 items-stretch'>
+    <section id='coworking' className='bg-linear-to-l from-custom-gray-gradient to-white flex flex-col lg:flex-row flex-wrap'>
+        <div className='realtive aspect-[631/946] w-full overflow-hidden flex flex-1 items-stretch'>
             <picture>
                 <source
                     media="(min-width: 1440px)"
@@ -24,7 +24,7 @@ const Coworking = () => {
                 />
             </picture>
         </div>
-        <div className='py-14 px-8 flex-1/2 md:px-16'>
+        <div className='py-14 px-8 flex-1 md:px-16'>
             <span className="encabezado">servicios</span>
             <span className="title"
             >Zona Coworking: <br />
