@@ -12,6 +12,9 @@ import service3 from "../assets/images/service_3.webp";
 import coworkingSmall from "../assets/images/coworking_bg_small.avif";
 import coworkingMedium from "../assets/images/coworking_bg_medium.avif";
 import coworkingDesktop from "../assets/images/coworking_bg.avif";
+import facebook from "../assets/icons/facebook.png";
+import instagram from "../assets/icons/instagram.png";
+import x from "../assets/icons/x.png";
 
 export const images = {
   hero: {
@@ -40,5 +43,10 @@ export const images = {
 export const icons = {
   hero: {
     play,
+  },
+  footer: {
+    facebook,
+    instagram,
+    x,
   },
 };

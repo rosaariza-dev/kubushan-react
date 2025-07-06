@@ -1,5 +1,5 @@
 import { Armchair, Coffee, EarOff, Wifi } from "lucide-react";
-import { images } from "./resources";
+import { icons, images } from "./resources";
 
 export const navItems = [
   {
@@ -65,4 +65,22 @@ export const coworkingItems = [
       "Cada mesa está equipada con tablets interactivas, para que disfrutes del mejor café sin perder el ritmo.",
     icon: Coffee,
   },
+];
+
+export const socialNetworks = [
+  {
+    name: "facebook",
+    link: "https://www.facebook.com",
+    img: icons.footer.facebook
+  },
+  {
+    name: "instagram",
+    link: "https://www.instagram.com",
+    img: icons.footer.instagram
+  },
+  {
+    name: "x",
+    link: "https://x.com",
+    img: icons.footer.x
+  }
 ];

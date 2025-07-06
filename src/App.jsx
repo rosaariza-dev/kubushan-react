@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/global/Footer'
 import About from './components/sections/About'
 import Coworking from './components/sections/Coworking'
 import Hero from './components/sections/Hero'
@@ -14,6 +15,7 @@ function App() {
    <Services />
    <Coworking />
    <Subscription />
+   <Footer />
    </>
   )
 }
