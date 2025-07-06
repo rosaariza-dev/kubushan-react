@@ -9,6 +9,9 @@ import womanDesktop from "../assets/images/woman.avif";
 import service1 from "../assets/images/service_1.webp";
 import service2 from "../assets/images/service_2.webp";
 import service3 from "../assets/images/service_3.webp";
+import coworkingSmall from "../assets/images/coworking_bg_small.avif";
+import coworkingMedium from "../assets/images/coworking_bg_medium.avif";
+import coworkingDesktop from "../assets/images/coworking_bg.avif";
 
 export const images = {
   hero: {
@@ -26,6 +29,11 @@ export const images = {
     service1,
     service2,
     service3,
+  },
+  coworking: {
+    coworkingSmall,
+    coworkingMedium,
+    coworkingDesktop,
   },
 };
 
