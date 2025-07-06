@@ -17,7 +17,7 @@
 }
 
 .title {
-  @apply font-primary font-bold text-custom-purple text-5xl leading-14 md:text-6xl md:leading-16 lg:text-[68px] lg:leading-18;
+  @apply font-primary font-bold text-custom-purple text-[43px] leading-14 md:text-6xl md:leading-16 lg:text-[68px] lg:leading-18;
 }
 
 .subtitle {
