@@ -1,0 +1,13 @@
+feat(menu): implementación de componente Menu, carrusel de tipos y configuración de servicio/api
+
+- se creó el componente 'Menu' en /components/sections
+- se instaló el CLI de shadcn
+- se implementarón los componentes 'button' y 'carousel' de shadcn en /components/ui para crear el carrusel de tipos de productos.
+- se creó el componente /components/CarouselMenu.jsx donde se encuentras los estilos del carrusel de tipos de productos.
+- se agregó en /public/images el archivo 'todos.webp' para la opción por defecto.
+- se implemento el objeto 'logger' en /lib/utils para estandarizar los logs de la aplicación.
+- se creó /services/api.js para la manejar la lógica de la api.
+- se implementó la función 'getTypes' en /services/api.js para consultar todos los tipos de productos.
+- se agregó el archivo de ejemplo de las variables de entorno
+- se configuró vite.config.js y se creó 'jsconfig.json' para poder manejar alias.
+
