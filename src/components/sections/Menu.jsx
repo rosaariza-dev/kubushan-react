@@ -1,17 +1,18 @@
 import { useMenu } from "@/contexts/MenuContext";
 import CardMenu from "../ui/CardMenu";
 import CarouselMenu from "../ui/CarouselMenu";
+import { ExternalLink } from "lucide-react";
 
 const Menu = () => {
   const { products, loading } = useMenu();
   return (
-    <section id="menu">
+    <section id="menu" className="pb-14 pt-10 ">
       <div className="pt-16 pb-10 px-8 md:px-16 text-center">
         <span className="encabezado">menú</span>
         <span className="title">Descubre nuestro menú</span>
         <div className="mt-16">
           <CarouselMenu />
-          <div className="flex justify-center">
+          <div className="flex flex-col justify-center items-center gap-8">
             {loading ? (
               <div className="w-full flex items-center justify-center py-16">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-custom-brown"></div>
@@ -35,6 +36,13 @@ const Menu = () => {
                 </p>
               </div>
             )}
+
+         <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)]">
+                <a href="#" className="flex items-center justify-center gap-4">
+                    Más <ExternalLink size={20} />
+                </a>
+          </button>
+
           </div>
         </div>
       </div>

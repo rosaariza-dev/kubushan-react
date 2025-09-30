@@ -1,4 +1,4 @@
-feat(menu): integración de MenuProvider y manejo de productos por tipo
+feat(menu): agregar botón de ver más opciones
 
 - se implementaron las funciones 'getProductsByTypeId' y 'getProducts' en '/services/api.js'.
 - se agregó la variable '--color-custom-card-menu' en 'index.css' para el color de las tarjetas del menú.
