@@ -1,9 +1,6 @@
-feat(utils): implementar función para formatear precio y agregarla en el componente de CardMenu
+feat(routing): implementar enrutado inicial
 
-- se implementaron las funciones 'getProductsByTypeId' y 'getProducts' en '/services/api.js'.
-- se agregó la variable '--color-custom-card-menu' en 'index.css' para el color de las tarjetas del menú.
-- se añadió 'contexts/MenuContext' para manejar la carga de tipos y productos.
-- se encapsuló el componente 'Menu' con 'MenuProvider' en 'app.js'.
-- se agregó 'components/ui/CardMenu' para definir los estilos de las tarjetas de productos.
-- se modificó 'components/ui/CarouselMenu' para usar 'useMenu' en la carga de productos por tipo seleccionado.
-
+- se añadieron las rutas '/', 'history' y '/menu' en 'App.jsx'.
+- se creó la carpeta '/pages' para almacenar las páginas.
+- se creó en '/pages' los componentes  'HomePage.jsx', 'HistoryPage.jsx', 'MenuPage.jsx' y 'NotFoundPage.jsx'.
+- se integró la navegación en los componentes 'About' y 'Menu'.

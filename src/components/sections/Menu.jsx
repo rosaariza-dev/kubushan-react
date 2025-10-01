@@ -2,9 +2,11 @@ import { useMenu } from "@/contexts/MenuContext";
 import CardMenu from "../ui/CardMenu";
 import CarouselMenu from "../ui/CarouselMenu";
 import { ExternalLink } from "lucide-react";
+import {useNavigate} from "react-router-dom";
 
 const Menu = () => {
   const { products, loading } = useMenu();
+  const navigate = useNavigate();
   return (
     <section id="menu" className="pb-14 pt-10 ">
       <div className="pt-16 pb-10 px-8 md:px-16 text-center">
@@ -37,10 +39,8 @@ const Menu = () => {
               </div>
             )}
 
-         <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)]">
-                <a href="#" className="flex items-center justify-center gap-4">
-                    Más <ExternalLink size={20} />
-                </a>
+         <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3" onClick={() => navigate("/menu")}>
+               Más <ExternalLink size={20} />
           </button>
 
           </div>

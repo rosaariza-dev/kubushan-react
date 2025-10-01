@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 .env
-.commit.text
+commit.text

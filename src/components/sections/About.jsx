@@ -1,9 +1,12 @@
 import clsx from "clsx"
 import { images } from "../../data/resources"
 import { ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 
 const About = () => {
+    const navigate = useNavigate();
+
     const aboutImageClasses = clsx(
         // Estilos base/mobile
         'overflow-hidden relative w-full min-h-[618px] bg-[url("/assets/images/about_bg_small.avif")] bg-cover bg-center bg-no-repeat',
@@ -12,6 +15,7 @@ const About = () => {
         // Estilos desktop
         'lg:bg-[url("/assets/images/about_bg.avif")]'
     );
+
 
   return (
     <section id='about' className="flex flex-col lg:flex-row">
@@ -43,10 +47,8 @@ const About = () => {
                 funcionales donde las personas pueden trabajar, relajarse y reconectar
                 con lo que realmente importa.
             </p>
-            <button className="button-base bg-custom-black text-white rounded-36 hover:bg-custom-black-hover flex items-center justify-center">
-                <a href="#" className="flex items-center justify-center gap-4">
-                    Conoce más <ExternalLink size={20} />
-                </a>
+            <button className="button-base bg-custom-black text-white rounded-36 hover:bg-custom-black-hover flex items-center justify-center gap-3" onClick={() => navigate("/history")}>       
+                 Conoce más <ExternalLink size={20} />
             </button>
         </div>
     </section>
