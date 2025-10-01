@@ -5,17 +5,23 @@ import { MenuProvider } from "./contexts/MenuContext";
 import HistoryPage from "./pages/HistoryPage";
 import MenuPage from "./pages/MenuPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CopyRight from "./components/ui/CopyRight";
 
 function App() {
   return (
     <BrowserRouter>
       <MenuProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <div className="min-h-screen flex flex-col">
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/history" element={<HistoryPage />} />
+              <Route path="/menu" element={<MenuPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </main>
+          <CopyRight />
+        </div>
       </MenuProvider>
     </BrowserRouter>
   );

@@ -1,6 +1,0 @@
-feat(routing): implementar enrutado inicial
-
-- se añadieron las rutas '/', 'history' y '/menu' en 'App.jsx'.
-- se creó la carpeta '/pages' para almacenar las páginas.
-- se creó en '/pages' los componentes  'HomePage.jsx', 'HistoryPage.jsx', 'MenuPage.jsx' y 'NotFoundPage.jsx'.
-- se integró la navegación en los componentes 'About' y 'Menu'.
