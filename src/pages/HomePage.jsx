@@ -5,16 +5,13 @@ import Hero from "@/components/sections/Hero";
 import Menu from "@/components/sections/Menu";
 import Services from "@/components/sections/Services";
 import Subscription from "@/components/sections/Subscription";
-import { MenuProvider } from "@/contexts/MenuContext";
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <About />
-      <MenuProvider>
-        <Menu />
-      </MenuProvider>
+      <Menu />
       <Services />
       <Coworking />
       <Subscription />
