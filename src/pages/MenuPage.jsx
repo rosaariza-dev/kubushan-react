@@ -1,10 +1,11 @@
+import Navbar from "@/components/ui/Navbar";
 
 const MenuPage = () => {
   return (
-    <main>
-      MenuPage
-    </main>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 
-export default MenuPage
+export default MenuPage;

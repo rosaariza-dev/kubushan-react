@@ -1,8 +1,11 @@
+import Navbar from "@/components/ui/Navbar";
 
 const HistoryPage = () => {
   return (
-    <main>HistoryPage</main>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 
-export default HistoryPage
+export default HistoryPage;
