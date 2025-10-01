@@ -1,4 +1,4 @@
-feat(menu): agregar botón de ver más opciones
+feat(utils): implementar función para formatear precio y agregarla en el componente de CardMenu
 
 - se implementaron las funciones 'getProductsByTypeId' y 'getProducts' en '/services/api.js'.
 - se agregó la variable '--color-custom-card-menu' en 'index.css' para el color de las tarjetas del menú.
