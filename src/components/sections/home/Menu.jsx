@@ -1,8 +1,8 @@
 import { useMenu } from "@/contexts/MenuContext";
-import CardMenu from "../ui/CardMenu";
-import CarouselMenu from "../ui/CarouselMenu";
+import CardMenu from "../../ui/CardMenu";
+import CarouselMenu from "../../ui/CarouselMenu";
 import { ExternalLink } from "lucide-react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
   const { products, loading } = useMenu();
@@ -39,10 +39,12 @@ const Menu = () => {
               </div>
             )}
 
-         <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3" onClick={() => navigate("/menu")}>
-               Más <ExternalLink size={20} />
-          </button>
-
+            <button
+              className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3"
+              onClick={() => navigate("/menu")}
+            >
+              Más <ExternalLink size={20} />
+            </button>
           </div>
         </div>
       </div>

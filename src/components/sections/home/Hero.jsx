@@ -1,6 +1,6 @@
-import { images , icons } from "../../data/resources";
-import Header from "../global/Header";
-import Testimonial from "../ui/Testimonial";
+import { images, icons } from "../../../data/resources";
+import Header from "../../global/Header";
+import Testimonial from "../../ui/Testimonial";
 
 const Hero = () => {
   return (
@@ -28,11 +28,11 @@ const Hero = () => {
             </picture>
           </div>
           <div className="flex-1">
-            <span className="title" >Más que café</span>
-            <span className="subtitle mt-3 mb-6 block lg:mt-5 " >
+            <span className="title">Más que café</span>
+            <span className="subtitle mt-3 mb-6 block lg:mt-5 ">
               Espacios con proposito, Tecnología con sentido
             </span>
-            <p  className="description">
+            <p className="description">
               Combinamos lo mejor del café y la tecnología con el arte de
               conectar, para que vivas con más presencia, propósito y paz, sorbo
               a sorbo.
@@ -42,7 +42,18 @@ const Hero = () => {
                 <a href="#menu">Explorar</a>
               </button>
               <button className="button-base text-base rounded-36  flex items-center justify-center hover:bg-custom-gray/80">
-                <a href="#about" className="flex items-center justify-center gap-2"><img src={icons.hero.play} alt="play" width={40} height={40} />Nuestra historia</a>
+                <a
+                  href="#about"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <img
+                    src={icons.hero.play}
+                    alt="play"
+                    width={40}
+                    height={40}
+                  />
+                  Nuestra historia
+                </a>
               </button>
             </div>
           </div>
