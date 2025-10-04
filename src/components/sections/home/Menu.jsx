@@ -2,7 +2,7 @@ import { useMenu } from "@/contexts/MenuContext";
 import CardMenu from "../../ui/CardMenu";
 import CarouselMenu from "../../ui/CarouselMenu";
 import { ExternalLink } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Menu = () => {
   const { products, loading } = useMenu();
@@ -21,15 +21,17 @@ const Menu = () => {
               </div>
             ) : products.length > 0 ? (
               <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
-                {products.map(({ _id, title, description, image, price }) => (
-                  <CardMenu
-                    key={_id}
-                    title={title}
-                    description={description}
-                    image={image}
-                    price={price}
-                  />
-                ))}
+                {products
+                  .slice(0, 3)
+                  .map(({ _id, title, description, image, price }) => (
+                    <CardMenu
+                      key={_id}
+                      title={title}
+                      description={description}
+                      image={image}
+                      price={price}
+                    />
+                  ))}
               </div>
             ) : (
               <div className="mt-16 flex w-full items-center justify-center">
@@ -39,11 +41,14 @@ const Menu = () => {
               </div>
             )}
 
-            <button
-              className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3"
-              onClick={() => navigate("/menu")}
-            >
-              Más <ExternalLink size={20} />
+            <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3">
+              <Link
+                to={"/menu"}
+                target="_blank"
+                className="flex items-center justify-center gap-3"
+              >
+                Más <ExternalLink size={20} />
+              </Link>
             </button>
           </div>
         </div>
