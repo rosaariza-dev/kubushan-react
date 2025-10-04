@@ -2,8 +2,8 @@ import React from "react";
 
 const History1 = () => {
   return (
-    <section className="flex items-center justify-center flex-col gap-10 lg:flex-row-reverse lg:gap-15">
-      <div className="flex flex-1 items-center justify-center aspect-auto relative max-w-[500px] lg:max-w-full ">
+    <section className="flex items-center justify-center flex-col gap-10 lg:flex-row-reverse lg:gap-15 bg-[#EBEBEB] pt-40 pb-16 px-8 md:px-16">
+      <div className="flex flex-1 items-center justify-center aspect-auto relative max-w-[500px] lg:max-w-full overflow-hidden">
         <img
           src="/assets/images/panda.webp"
           alt="panda"
