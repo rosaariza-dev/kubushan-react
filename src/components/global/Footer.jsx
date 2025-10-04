@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { navItems, socialNetworks } from "../../data";
-import CopyRight from "../ui/CopyRight";
 
 const Footer = () => {
   return (
@@ -26,10 +26,10 @@ const Footer = () => {
               key={name}
               className="w-12 h-12 bg-custom-black flex items-center justify-center cursor-pointer rounded-[50%] hover:bg-custom-black-hover md:w-10 md:h-10"
             >
-              <a
-                href={link}
+              <Link
+                to={link}
                 target="_blank"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center w-full h-full"
               >
                 <img
                   src={img}
@@ -38,7 +38,7 @@ const Footer = () => {
                   height={22}
                   className="object-contain md:w-[18px] md:h-[18px]"
                 />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

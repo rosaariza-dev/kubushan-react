@@ -38,23 +38,20 @@ const Hero = () => {
               a sorbo.
             </p>
             <div className="flex items-start justify-start flex-col md:flex-row gap-10 mt-6 mb-10">
-              <button className="button-base rounded-tr-36 rounded-b-36 bg-custom-purple text-white text-base shadow-[var(--shadow-principal)] hover:bg-custom-purple-hover">
-                <a href="#menu">Explorar</a>
-              </button>
-              <button className="button-base text-base rounded-36  flex items-center justify-center hover:bg-custom-gray/80">
-                <a
-                  href="#about"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <img
-                    src={icons.hero.play}
-                    alt="play"
-                    width={40}
-                    height={40}
-                  />
-                  Nuestra historia
-                </a>
-              </button>
+              <a
+                href="#menu"
+                className="button-base rounded-tr-36 rounded-b-36 bg-custom-purple text-white text-base shadow-[var(--shadow-principal)] hover:bg-custom-purple-hover"
+              >
+                Explorar
+              </a>
+
+              <a
+                href="#about"
+                className="button-base text-base rounded-36 gap-2 flex items-center justify-center hover:bg-custom-gray/80"
+              >
+                <img src={icons.hero.play} alt="play" width={40} height={40} />
+                Nuestra historia
+              </a>
             </div>
           </div>
         </div>

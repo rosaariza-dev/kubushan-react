@@ -41,15 +41,13 @@ const Menu = () => {
               </div>
             )}
 
-            <button className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3">
-              <Link
-                to={"/menu"}
-                target="_blank"
-                className="flex items-center justify-center gap-3"
-              >
-                Más <ExternalLink size={20} />
-              </Link>
-            </button>
+            <Link
+              to={"/menu"}
+              target="_blank"
+              className="button-base bg-custom-purple text-white rounded-36 hover:bg-custom-purple flex items-center justify-center font-secondary font-medium shadow-[var(--shadow-principal)] gap-3 md:w-[212px]"
+            >
+              Más <ExternalLink size={20} />
+            </Link>
           </div>
         </div>
       </div>

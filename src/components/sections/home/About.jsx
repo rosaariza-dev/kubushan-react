@@ -47,15 +47,14 @@ const About = () => {
           funcionales donde las personas pueden trabajar, relajarse y reconectar
           con lo que realmente importa.
         </p>
-        <button className="button-base bg-custom-black text-white rounded-36 hover:bg-custom-black-hover flex items-center justify-center gap-3">
-          <Link
-            to={"/history"}
-            target="_blank"
-            className="flex items-center justify-center gap-3"
-          >
-            Conoce más <ExternalLink size={20} />
-          </Link>
-        </button>
+
+        <Link
+          to={"/history"}
+          target="_blank"
+          className="button-base bg-custom-black text-white rounded-36 hover:bg-custom-black-hover flex items-center justify-center gap-3 md:w-[212px]"
+        >
+          Conoce más <ExternalLink size={20} />
+        </Link>
       </div>
     </section>
   );
