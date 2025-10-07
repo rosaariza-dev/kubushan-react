@@ -1,3 +1,4 @@
+import { sanitizeError } from "@/utils/errorHelper";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -19,12 +20,26 @@ export const logger = {
     if (import.meta.env.DEV) console.log("✅", ...args);
   },
   warn: (...args) => {
-    if (import.meta.env.DEV) console.warn("⚠️", ...args);
+    console.warn("⚠️", ...args);
   },
   error: (...args) => {
-    if (import.meta.env.DEV) console.error("🚨", ...args);
+    const sanitized = args.map((arg) =>
+      arg instanceof Error ? sanitizeError(arg) : arg
+    );
+
+    if (!import.meta.env.DEV) {
+      // En producción: solo mensaje + error sanitizado (sin metadata)
+      console.error("🚨", ...sanitized.slice(0, 2));
+    } else {
+      // En desarrollo: todo (mensaje + error + metadata)
+      console.error("🚨", ...sanitized);
+    }
   },
   debug: (...args) => {
     if (import.meta.env.DEV) console.debug("🐛", ...args);
+  },
+
+  inspectWarn: (...args) => {
+    if (import.meta.env.DEV) console.warn("⚠️ [DEBUG]", ...args);
   },
 };

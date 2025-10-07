@@ -42,7 +42,7 @@ const CarouselMenu = () => {
         >
           <button
             className={cn(
-              "flex flex-row items-center justify-center min-h-[60px]  min-w-[280px]  w-full px-12 py-4  bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors",
+              "flex flex-row items-center justify-center min-h-[92px]  min-w-[280px]  w-full px-12 py-4  bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors",
               selectedTypeId === null
                 ? "bg-custom-brown"
                 : "bg-custom-black  hover:bg-custom-black-hover"
@@ -69,7 +69,7 @@ const CarouselMenu = () => {
           >
             <button
               className={cn(
-                "flex flex-row items-center justify-center min-h-[60px]  min-w-[280px]  w-full px-12 py-4  bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors",
+                "flex flex-row items-center justify-center min-h-[92px]  min-w-[280px]  w-full px-12 py-4  bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors",
                 selectedTypeId === _id
                   ? "bg-custom-brown"
                   : "bg-custom-black  hover:bg-custom-black-hover"

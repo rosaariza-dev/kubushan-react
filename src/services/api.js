@@ -31,7 +31,11 @@ export const getTypes = async () => {
     return types;
   } catch (error) {
     logger.error("[getTypes] Ocurrio un error al consultar los tipos", error);
-    throw error;
+
+    throw new Error(
+      "[getTypes] Ocurrio un error al consultar los tipos",
+      error
+    );
   }
 };
 
@@ -56,7 +60,7 @@ export const getProducts = async () => {
   } catch (error) {
     logger.error(
       "[getProducts] Ocurrió un error al consultar los productos",
-      err
+      error
     );
     throw error;
   }
@@ -97,8 +101,8 @@ export const getProductsByTypeId = async (id) => {
   } catch (error) {
     logger.error(
       "[getProductsByTypeId] Ocurrió un error al consultar los productos por tipo",
-      { typeId: id },
-      error
+      error,
+      { typeId: id }
     );
     throw error;
   }
@@ -110,7 +114,7 @@ export const sendEmail = async (email) => {
     const validation = validateEmail(email);
 
     if (!validation.isValid) {
-      logger.warn("[sendEmail] Email inválido", {
+      logger.inspectWarn("[sendEmail] Email inválido", {
         email,
         message: validation.message,
       });
@@ -146,7 +150,7 @@ export const sendEmail = async (email) => {
         message: result.data?.error,
       });
     } else {
-      logger.warn("[sendEmail] Respuesta no exitosa", {
+      logger.inspectWarn("[sendEmail] Respuesta no exitosa", {
         email: validation.email,
         status: result.status,
         message: response.message,

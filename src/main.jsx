@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+const isDevelopment = import.meta.env.DEV;
+
+createRoot(document.getElementById("root")).render(
+  isDevelopment ? (
+    // Sin StrictMode en desarrollo
     <App />
-  </StrictMode>,
-)
+  ) : (
+    // Con StrictMode en producción
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )
+);
