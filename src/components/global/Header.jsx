@@ -19,9 +19,7 @@ const Header = () => {
     // Estilos desktop
     "md:gap-5 md:items-center md:justify-end  md:right-auto md:top-auto md:h-auto md:static md:bg-transparent md:border-l-none md:flex-row md:p-0 md:max-w-full",
     // Estilos condicionales
-    isOpen
-      ? "right-0 transition-all duration-300 ease-in-out"
-      : "-right-full transition-all duration-500 ease-in"
+    isOpen ? "right-0 transition-all duration-300 ease-in-out" : "-right-full"
   );
 
   const headerOverlayClasses = clsx(
