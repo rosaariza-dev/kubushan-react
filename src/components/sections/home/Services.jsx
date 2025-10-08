@@ -17,7 +17,7 @@ const Services = () => {
       <span className="encabezado">servicios</span>
       <span className="title text-center">Nuestros servicios</span>
       <br />
-      <span className="font-secondary block text-xl py-5 text-custom-black">
+      <span className="font-secondary block text-xl py-5 text-custom-black text-center">
         En Kubushan pensamos en todo
       </span>
       <div className="flex flex-col justify-center gap-14 my-10 items-stretch md:flex-row md:flex-wrap md:gap-10">

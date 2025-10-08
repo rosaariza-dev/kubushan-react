@@ -49,7 +49,7 @@ const Subscription = () => {
   );
   return (
     <section className={subscriptionClasses}>
-      <p className="text-5xl leading-16 font-primary font-bold mb-5 text-white md:text-[80px] md:mb-14 md:leading-24">
+      <p className="text-4xl sm:text-5xl leading-16 font-primary p-2 font-bold mb-5 text-white md:text-[80px] md:mb-14 md:leading-24">
         Sé el primero en enterarte de nuestras novedades y promociones
         exclusivas
       </p>

@@ -9,7 +9,13 @@ import { useMenu } from "@/contexts/MenuContext";
 import { cn } from "@/lib/utils";
 
 const CarouselMenu = () => {
-  const { selectedTypeId, fetchAllProducts, fetchProductsByType , loading, types} = useMenu();
+  const {
+    selectedTypeId,
+    fetchAllProducts,
+    fetchProductsByType,
+    loading,
+    types,
+  } = useMenu();
 
   const handleTypeClick = (typeId) => {
     if (typeId === null) {
@@ -38,11 +44,11 @@ const CarouselMenu = () => {
       <CarouselContent>
         <CarouselItem
           key={0}
-          className="sm:basis-1/2  lg:basis-1/3 xl:basis-1/4"
+          className="basis-1/1 sm:basis-1/2  lg:basis-1/3 xl:basis-1/4"
         >
           <button
             className={cn(
-              "flex flex-row items-center justify-center min-h-[92px]  min-w-[280px]  w-full px-12 py-4  bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors",
+              "flex flex-row items-center justify-center min-h-[92px]  min-w-[280px]  w-full px-12 py-4 bg-custom-black rounded-[42px] gap-4 cursor-pointer transition-colors mr-4",
               selectedTypeId === null
                 ? "bg-custom-brown"
                 : "bg-custom-black  hover:bg-custom-black-hover"
@@ -65,7 +71,7 @@ const CarouselMenu = () => {
         {types.map(({ _id, name, image }) => (
           <CarouselItem
             key={_id}
-            className="sm:basis-1/2  lg:basis-1/3 xl:basis-1/4 "
+            className="basis-1/1  sm:basis-1/2  lg:basis-1/3 xl:basis-1/4 "
           >
             <button
               className={cn(
