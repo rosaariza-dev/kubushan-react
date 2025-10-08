@@ -11,8 +11,8 @@ createRoot(document.getElementById("root")).render(
     <App />
   ) : (
     // Con StrictMode en producción
-    <React.StrictMode>
+    <StrictMode>
       <App />
-    </React.StrictMode>
+    </StrictMode>
   )
 );
