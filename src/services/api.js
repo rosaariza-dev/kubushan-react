@@ -14,14 +14,32 @@ const api = axios.create({
 export const getTypes = async () => {
   try {
     logger.info("[getTypes] Consultando /types");
-    const { data: response } = await api.get("/types");
+    const { data: response, status } = await api.get("/types");
 
-    logger.debug("[getTypes] Respuesta obtenida:", response);
+    logger.debug("[getTypes] Respuesta obtenida:", { response, status });
 
-    const { success, data: types } = response;
+    if (status !== 200) {
+      logger.inspectWarn("[getTypes] Código de estado inesperado", { status });
+      throw new Error(`Código de estado HTTP inesperado: ${status}`);
+    }
+
+    const { success, message, data: types } = response;
 
     if (!success) {
-      logger.warn("[getTypes] La consulta no fue exitosa");
+      logger.inspectWarn("[getTypes] La consulta no fue exitosa", { message });
+      throw new Error(
+        message || "Error desconocido en la respuesta del servidor"
+      );
+    }
+
+    if (!Array.isArray(types)) {
+      logger.error(
+        "[getTypes] Formato de datos inválido - se esperaba un array",
+        {
+          tipoRecibido: typeof types,
+        }
+      );
+      throw new Error("El servidor devolvió datos en formato inválido");
     }
 
     logger.success("[getTypes] Tipos obtenidos exitosamente", {
@@ -31,25 +49,45 @@ export const getTypes = async () => {
     return types;
   } catch (error) {
     logger.error("[getTypes] Ocurrio un error al consultar los tipos", error);
-
-    throw new Error(
-      "[getTypes] Ocurrio un error al consultar los tipos",
-      error
-    );
+    throw error;
   }
 };
 
 export const getProducts = async () => {
   try {
     logger.info("[getProducts] Consultando productos");
-    const { data: response } = await api.get("/products");
+    const { data: response, status } = await api.get("/products");
 
-    logger.debug("[getProducts] Respuesta obtenida", response);
+    logger.debug("[getProducts] Respuesta obtenida", { response, status });
+
+    if (status !== 200) {
+      logger.inspectWarn("[getProducts] Código de estado inesperado", {
+        status,
+      });
+      throw new Error(
+        `[getProducts] Código de estado HTTP inesperado: ${status}`
+      );
+    }
 
     const { success, message, data: products } = response;
 
     if (!success) {
-      logger.warn("[getProducts] La consulta no fue exitosa", { message });
+      logger.inspectWarn("[getProducts] La consulta no fue exitosa", {
+        message,
+      });
+      throw new Error(
+        message || "Error desconocido en la respuesta del servidor"
+      );
+    }
+
+    if (!Array.isArray(products)) {
+      logger.error(
+        "[getProducts] Formato de datos inválido - se esperaba un array",
+        {
+          tipoRecibido: typeof products,
+        }
+      );
+      throw new Error("El servidor devolvió datos en formato inválido");
     }
 
     logger.success("[getProducts] Productos consultados exitosamente", {
@@ -73,20 +111,43 @@ export const getProductsByTypeId = async (id) => {
     });
 
     if (!id) {
-      logger.warn(
-        "[getProductsByTypeId] No se ha proporcionado el parámetro 'id'"
+      logger.inspectWarn(
+        "[getProductsByTypeId] No se ha proporcionado el parámetro 'id' o no es válido"
       );
+      throw new Error("El ID del tipo es requerido y debe ser válido");
     }
 
-    const { data: response } = await api.get(`/types/${id}/products`);
+    const { data: response, status } = await api.get(`/types/${id}/products`);
     logger.debug("[getProductsByTypeId] Respuesta obtenida", response);
+
+    if (status !== 200) {
+      logger.inspectWarn("[getProductsByTypeId] Código de estado inesperado", {
+        status,
+        typeId: id,
+      });
+      throw new Error(`Código de estado HTTP inesperado: ${status}`);
+    }
 
     const { success, message, data: products } = response;
 
     if (!success) {
-      logger.warn("[getProductsByTypeId] la consulta no fue exitosa", {
+      logger.inspectWarn("[getProductsByTypeId] la consulta no fue exitosa", {
         message,
       });
+      throw new Error(
+        message || "Error desconocido en la respuesta del servidor"
+      );
+    }
+
+    if (!Array.isArray(products)) {
+      logger.error(
+        "[getProductsByTypeId] Formato de datos inválido - se esperaba un array",
+        {
+          tipoRecibido: typeof products,
+          typeId: id,
+        }
+      );
+      throw new Error("El servidor devolvió datos en formato inválido");
     }
 
     logger.success(
